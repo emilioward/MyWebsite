@@ -38,10 +38,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <p class="w3-large"><b><i class="fa fa-code fa-fw w3-margin-right w3-text-blue"></i>Skills</b></p>
           <p class="w3-codespan">Python</p>
           <p class="w3-codespan">Flask, SQLAlchemy, WTForms, Jinja, Unittest</p>
-          <p class="w3-codespan">Java (Spring)</p>
+          <p class="w3-codespan">Java (Spring Boot)</p>
           <p class="w3-codespan">HTML</p>
           <p class="w3-codespan">CSS</p>
-          <p class="w3-codespan">Git/Github, Codacy, Travis CI, Concourse</p>
+          <p class="w3-codespan">Git, Codacy, Travis CI, Concourse</p>
           <p class="w3-codespan">PostgreSQL, OracleSQL</p>
           <p class="w3-codespan">Selenium</p>
           <p class="w3-codespan">Docker</p>
@@ -55,34 +55,50 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <!-- Right Column -->
     <div class="w3-twothird">
     
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
+      <!-- <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Experience</h2>
+
+        </div>
+      </div> -->
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-user fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>About Me</h2>
         <div class="w3-container">
           Hi my name is Emilio and i'm a software developer with over
-            3 years commercial experience in a variety of technologies. My experiences range from developing web applications in the public sector to debugging/maintaining services in the financial industry.
+            3 years commercial experience in a variety of technologies. 
+            <br><br>
+             I graduated from Nottingham Trent University with a degree in Computer Science in 2016. Some of my professional experiences include:
           <ul>
           <li>Python/Java web development building RESTful microservices</li>
           <li>Skilled working in an Agile manner and flexible to meet changing business requirements/technologies</li>
           <li>Experience with popular IDEs such as PyCharm, Visual Studio, and IntelliJ</li>
-          <li>Unit and behavioural testing and a strong advocate of automation</li>
-          <li>I have worked with continious intergration tools as part of a development workflow</li>
+          <li>Writing unit and behavioural tests as part of continious integration</li>
           <li>Comfortable using unix command line for Git and general usage</li>
           <li>Writing MySQL/Oracle SQL scripts for query processing and execution</li>
           </ul>
+          <p>In my spare time I love to learn and refresh my knowledge online. I enjoy tinkering creating little projects for myself as well as
+            contributing to open source projects. Outside of all that you'll find me at the gym, playing tennis or
+            learning new receipies to cook!
+          </p>
           <hr>
         </div>
       </div>
 
       <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-user fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>About Me</h2>
+        <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-pencil-alt fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Projects</h2>
         <div class="w3-container">
-          <p>In my spare time I love to learn and refresh my knowledge online. I enjoy tinkering creating little projects for myself as well as
-            contributing to open source projects. Outside of all that you'll find me at the gym, playing tennis or
-            learning new receipies to cook!
+          <p>These are some of the projects that I have developed in my spare time. 
+            I use these as a way to help me learn new languages that I might not learn during my day to day work, but also as a way of creating fun and interesting applications!
           </p>
-          <p>
-            You can find out more about me in my CV I have linked to the site along with a link to my LinkedIn. Feel free to get in contact with the email provided.
-          </p>
+          <div class="w3-card" style="width:250px">
+            <img class="mySlides w3-animate-fading" src="static/images/project_pictures/homepage.png" style="width:250px">
+            <img class="mySlides w3-animate-fading" src="static/images/project_pictures/attractions.png" style="width:250px">
+            <img class="mySlides w3-animate-fading" src="static/images/project_pictures/Events.png" style="width:250px">
+            <img class="mySlides w3-animate-fading" src="static/images/project_pictures/places.png" style="width:250px">
+            <div class="w3-container" style="width: 300px">
+              <h4><a href="https://github.com/emilioward/NottinghamTourismApp" target="_blank">Nottingham Tourism App</a></h4>
+            </div>
+          </div>
           <hr>
         </div>
       </div>
@@ -98,8 +114,24 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <footer class="w3-container w3-blue w3-center w3-margin-top">
   <p>Last Updated - April 2020</a></p>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
+
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000);    
+  }
+  </script>
 
 </body>
 </html>
